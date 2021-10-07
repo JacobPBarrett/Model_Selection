@@ -220,7 +220,7 @@ All VIF values less than 5, so don't need to throw out any variables just yet!
 
 $~$
 
-<span style="color:black;font-size:30px">2.3 Model formation and multicolinearity check</span>
+<span style="color:black;font-size:30px">2.3 Dredging and subsetting</span>
 
 ```{r dredging}
 options(na.action = "na.fail") 
@@ -297,7 +297,7 @@ ant.sel.table
 
 $~$
 
-<span style="color:black;font-size:30px">2.6 Visualization of the most important parameters</span>
+<span style="color:black;font-size:30px">2.6 Visualization of important parameters</span>
 
 And "publishable" figures for the effects of our two most important predictors: 
 
@@ -313,7 +313,7 @@ p4 <- ggplot(ant, aes(FRAG, RSR_SS3, colour = FRAG)) +
   geom_point() +
   geom_smooth(method="lm") +
   scale_colour_gradientn(colours = terrain.colors(10, rev=TRUE)) +
-  scale_x_continuous(limits = c(-2, 2.75)) +   
+  scale_x_continuous(limits = c(-1.5, 2.6)) +   
   xlab ("Proportion of Coarse Rock Fragments") +
   ylab ("Rarified Species Richness") 
 
